@@ -1,2 +1,17 @@
-<h1>Flats#show</h1>
-<p>Find me in app/views/flats/show.html.erb</p>
+<h1><%= @flat.name %></h1>
+
+<%= image_tag @flat.photo, height: 300, width: 400, crop: :fill  %>
+
+<p><%= @flat.description %></p>
+
+<ul>
+<li>Owner: <%= @flat.user.firstname %></li>
+<li>Price: <%= @flat.price %></li>
+<li>Capicity: <%= @flat.capacity %></li>
+<li>Location: <%= @flat.address %> at <%= @flat.city %> </li> <!-- To be replace by Google API -->
+<!-- link to book page -->
+</ul>
+
+<%= link_to "Edit flat", edit_flat_path(@flat), class: "btn btn-primary" %>
+<%= link_to "Delete", flat_path(@flat), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to "Back to the flats", flats_path, class: "btn btn-primary" %>
