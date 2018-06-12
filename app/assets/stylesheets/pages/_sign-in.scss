@@ -12,7 +12,6 @@
   justify-content: center;
 }
 
-
 .sign-in-flex{
   display: flex;
   flex-direction: column;
@@ -32,7 +31,6 @@
   border-radius: 4px;
 }
 
-
 .remember-me-check {
   text-align: left;
   word-spacing: 4px;
@@ -45,21 +43,24 @@
   margin-bottom: 8px;
 }
 
-.form-control {
-  width: 400px;
-  height: 80px;
-  font-family: "Raleway", "Helvetica", "sans-serif";
-  font-size: 24px;
-  font-weight: lighter !important;
-  color: gray;
+input.input-from-sign-in {
+  width: 350px;
+  height: 60px;
   border-radius: 4px;
-
 }
+
+label {
+  font-weight: 200;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 18px;
+  color: gray;
+}
+
 .btn {
   border: 2px solid #FC5B62;
   background-color: #FC5B62;
-  width: 400px;
-  height: 80px;
+  width: 350px;
+  height: 60px;
   border-radius: 4px;
   font-family: "Raleway", "Helvetica", "sans-serif";
   font-size: 24px;
@@ -68,5 +69,33 @@
   margin-bottom: 10px;
 }
 
+.btn:hover {
+  opacity: 0.8;
+  color: snow;
+}
+
+.remember-me-button {
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: snow;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#user_remember_me {
+  margin-right: 10px;
+  box-shadow: none;
+  border-radius: 2px;
+
+}
+
+a {
+  color: darkgray;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FC5B62;
+}
 
 

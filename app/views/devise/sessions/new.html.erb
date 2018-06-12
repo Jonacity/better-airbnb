@@ -5,13 +5,13 @@
       <div class="sign-in-h2">Log in</div>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
-          <div class="input-from-sign-in"><%= f.input :email, required: false, autofocus: true %></div>
-          <div class="input-from-sign-in"><%= f.input :password, required: false %></div>
-          <div class="remember-me-check"><%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %></div>
+          <div><%= f.input :email, required: false, autofocus: true, input_html: {class: "input-from-sign-in"} %></div>
+          <div class="input-from-sign-in"><%= f.input :password, required: false, input_html: {class: "input-from-sign-in"} %></div>
+          <div class="remember-me-check"><%= f.input :remember_me, input_html: {class: "remember-me-button"}, as: :boolean if devise_mapping.rememberable? %></div>
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Log in" %>
+          <%= f.button :submit, "Log in", input_html: {class: "subbmit-pink-button"} %>
         </div>
       <% end %>
 
