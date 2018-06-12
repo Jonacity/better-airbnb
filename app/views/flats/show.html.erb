@@ -1,6 +1,6 @@
 <h1><%= @flat.name %></h1>
 
-<%= image_tag @flat.photo, height: 300, width: 400, crop: :fill  %>
+<%= image_tag @flat.photo.url, height: 300, width: 400, crop: :fill  %>
 
 <p><%= @flat.description %></p>
 
