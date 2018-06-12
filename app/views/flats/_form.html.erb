@@ -1,0 +1,10 @@
+<%= simple_form_for [@flat] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :photo %>
+    <%= f.input :price %>
+    <%= f.input :address %>
+    <%= f.input :city %>
+    <%= f.input :capacity %>
+    <%= f.submit "save", class: "btn btn-primary" %>
+<% end %>
