@@ -1,0 +1,72 @@
+
+
+.sign-in-banner {
+  margin-top: -70px;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sign-in-flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-form {
+  margin-top: 50px;
+  border: 1px solid lightgray;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: darkgray;
+  border-radius: 4px;
+}
+
+
+.remember-me-check {
+  text-align: left;
+  word-spacing: 4px;
+}
+
+.sign-in-h2 {
+  border-bottom: 1px solid lightgray;
+  text-align: left;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 400px;
+  height: 80px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: gray;
+  border-radius: 4px;
+
+}
+.btn {
+  border: 2px solid #FC5B62;
+  background-color: #FC5B62;
+  width: 400px;
+  height: 80px;
+  border-radius: 4px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: snow;
+  margin-bottom: 10px;
+}
+
+
+
