@@ -12,6 +12,12 @@
 <!-- link to book page -->
 </ul>
 
-<%= link_to "Edit flat", edit_flat_path(@flat), class: "btn btn-primary" %>
-<%= link_to "Delete", flat_path(@flat), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+  <% if policy(@flat).edit? %>
+     <%= link_to "Update", edit_flat_path(@flat), class: "btn btn-primary" %>
+  <% end %>
+
+  <% if policy(@flat).destroy? %>
+    <%= link_to "Delete", flat_path(@flat), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+
 <%= link_to "Back to the flats", flats_path, class: "btn btn-primary" %>
