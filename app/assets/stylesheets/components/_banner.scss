@@ -1,0 +1,48 @@
+.banner {
+  margin-top: -70px;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 44px;
+  max-width: 600px;
+  text-align: left;
+  font-weight: bold;
+  margin-left: 300px;
+  margin-top: -80px;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+#imaginary_container{
+    margin-top:20px; /* Don't copy this */
+
+}
+.stylish-input-group .input-group-addon{
+    background: white !important;
+    opacity: 0.4;
+    border-radius: 8px;
+    height: 50px;
+}
+.stylish-input-group .form-control{
+  border-right:0;
+  opacity: 0.4;
+  border-radius-right: 8px;
+  height: 50px;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
