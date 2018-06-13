@@ -4,8 +4,9 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = current_user
     if @user.update(user_params)
-      redirect_to @user
+      redirect_to edit_user_url
     else
       render :edit
     end
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
   private 
 
   def user_params
-    params.require(:user).permit(:fristname, :lastname, :email, :payment) 
+    params.require(:user).permit(:fristname, :lastname, :email, :payment, :photo) 
   end
 end
 
