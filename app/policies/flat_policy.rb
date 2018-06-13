@@ -30,8 +30,8 @@ class FlatPolicy < ApplicationPolicy
   end
 
   private
+  
   def is_owner?
     @record.user == @user 
   end
-
 end
