@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'dashboard/flats'
+  get 'dashboard/bookings'
+
   resources :flats do
     resources :bookings, only: [:new, :create, :edit, :update]
   end
