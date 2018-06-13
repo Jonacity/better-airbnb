@@ -17,9 +17,25 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @booking = Booking.find(params[:id])
+    @flat = Flat.find(params[:flat_id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @user = current_user
+
+    if @booking.update(booking_params)
+      redirect_to edit_user_path(@user)
+    else
+      render :edit
+    end
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:checkin, :checkout, :guests, :flat_id)
+    params.require(:booking).permit(:checkin, :checkout, :guests, :flat_id, :status)
   end
 end

@@ -1,0 +1,18 @@
+<h2>Your bookings:</h2>
+<ul>
+<% @user.bookings.each do |booking| %>
+<li><%= booking.flat.name %> -- from: <%= booking.checkin %>, to: <%= booking.checkout %>, for <%= booking.guests %> persons -- [<%= booking.status %>]
+<%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking) %>
+</li>
+<% end %>
+</ul>
+
+<h2>Edit your profile</h2>
+
+<%= simple_form_for [@user] do |f| %>
+    <%= f.input :firstname %>
+    <%= f.input :lastname %>
+    <%= f.input :email %>
+    <%= f.input :payment, :collection => %w[Card Cash] %>
+    <%= f.submit "save", class: "btn btn-primary" %>
+<% end %>
