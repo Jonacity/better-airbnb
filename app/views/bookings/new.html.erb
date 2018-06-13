@@ -1,10 +1,15 @@
-<h1>New booking</h1>
 
-<%= simple_form_for [@flat, @booking] do |f| %>
-  <%= f.input :checkin %>
-  <%= f.input :checkout %>
-  <%= f.input :guests %>
-  <%= f.submit "save", class: "btn btn-primary" %>
-<% end %>
-
+<div class="booking-banner" id="banner-for-new-booking" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url(<%= image_path('booking.jpg') %>);">
+  <div class="sign-in-flex">
+    <div class="new-booking">
+      <div class="sign-in-h2">New booking</div>
+        <%= simple_form_for [@flat, @booking] do |f| %>
+          <%= f.input :checkin, input_html: {class: "input-from-new-booking"} %>
+          <%= f.input :checkout, input_html: {class: "input-from-new-booking"} %>
+          <%= f.input :guests, input_html: {class: "input-from-new-booking"} %>
+          <%= f.submit "save", class: "btn" %>
+        <% end %>
+    </div>
+  </div>
+</div>
 

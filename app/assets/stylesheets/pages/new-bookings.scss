@@ -1,0 +1,39 @@
+
+.booking-banner {
+  margin-top: -70px;
+  color: white;
+  text-align: center;
+  height: 100%;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner-for-new-booking{
+  height: 140vh;
+  background-position: center;
+}
+
+.new-booking {
+  margin-top: 0px;
+  border: 1px solid lightgray;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: darkgray;
+  border-radius: 4px;
+  max-height: 80%;
+}
+
+.input-from-new-booking {
+  width: 500px;
+  height: 60px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
