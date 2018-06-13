@@ -12,9 +12,12 @@
     <!-- link to book page -->
     </ul>
   <div class="buttons-flats">
-    <%= link_to "Book now", new_flat_booking_path(@flat), class: "btn" %>
-    <%= link_to "Edit flat", edit_flat_path(@flat), class: "btn" %>
-    <%= link_to "Delete", flat_path(@flat), class: "btn", method: :delete, data: { confirm: "Are you sure?" } %>
+    <% unless current_user == @flat.user %>
+      <%= link_to "Book now", new_flat_booking_path(@flat), class: "btn" %>
+    <% else %>
+      <%= link_to "Edit flat", edit_flat_path(@flat), class: "btn" %>
+      <%= link_to "Delete", flat_path(@flat), class: "btn", method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
     <%= link_to "Back to the flats", flats_path, class: "btn" %>
     </div>
   </div>
