@@ -6,10 +6,13 @@
   margin: 0;
   text-align: center;
   color: white;
+  border: none;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-weight: 200;
 }
 .alert-info {
-  background: $green;
+  background: linear-gradient(to right, #00b09b, #96c93d);
 }
 .alert-warning {
-  background: $red;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
 }
