@@ -1,0 +1,9 @@
+<h1>Edit your booking</h1>
+
+<%= simple_form_for [@flat, @booking] do |f| %>
+    <%= f.input :checkin %>
+    <%= f.input :checkout %>
+    <%= f.input :guests %>
+    <%= f.input :status, :collection => %w[Accepted Declined] %>
+    <%= f.submit "save", class: "btn btn-primary" %>
+<% end %>
