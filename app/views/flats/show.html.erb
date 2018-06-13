@@ -1,7 +1,7 @@
 <div class="sign-in-banner-flats" style="background-image: url('<%= cl_image_path @flat.photo, input_html: {class: "flat-picture"}  %>');">
 
   <div class="sign-in-flex-show">
-    <div class="sign-in-h1"><%= @flat.name %></div>
+    <div class="sign-in-h1"> <%= @flat.name %> </div>
     <p class="description-title"><%= @flat.description %></p>
     <ul class="flat-description">
     <li>Owner: <%= @flat.user.firstname %></li>
