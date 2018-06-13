@@ -2,7 +2,7 @@
   <div class="sign-in-flex">
     <div class="my-booking">My Bookings</div>
         <div class="bookings-description">
-            <% @user.bookings.each do |booking| %>
+            <% @bookings.each do |booking| %>
             <p class="paragraph-style" id="title-booking"><%= booking.flat.name %></p>
             <p class="paragraph-style">from: <%= booking.checkin %></p>
             <p class="paragraph-style">to: <%= booking.checkout %></p>
@@ -11,16 +11,6 @@
             <p class="paragraph-style"><%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking), class: "btn"  %></p>
             <% end %>
         </div>
-
-        <div class="new-booking">
-            <div class="sign-in-h2">Edit your profile</div>
-            <%= simple_form_for [@user] do |f| %>
-                <%= f.input :firstname, input_html: {class: "input-from-new-booking"} %>
-                <%= f.input :lastname, input_html: {class: "input-from-new-booking"} %>
-                <%= f.input :email, input_html: {class: "input-from-new-booking"} %>
-                <%= f.input :payment, :collection => %w[Card Cash], input_html: {class: "input-from-new-booking"} %>
-                <%= f.submit "save", class: "btn" %>
-            <% end %>
-        </div>
     </div>
 </div>
+
