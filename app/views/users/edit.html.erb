@@ -1,18 +1,28 @@
-<h2>Your bookings:</h2>
-<ul>
-<% @user.bookings.each do |booking| %>
-<li><%= booking.flat.name %> -- from: <%= booking.checkin %>, to: <%= booking.checkout %>, for <%= booking.guests %> persons -- [<%= booking.status %>]
-<%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking) %>
-</li>
-<% end %>
-</ul>
+<div class="booking-banner" id="banner-for-new-booking-profile" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url(<%= image_path('my-booking.jpg') %>);">
+  <div class="sign-in-flex">
+    <div class="my-booking">Your Bookings</div>
+    <div class="bookings-description">
+        <% @user.bookings.each do |booking| %>
+        <p class="paragraph-style" id="title-booking"><%= booking.flat.name %></p>
+        <p class="paragraph-style">from: <%= booking.checkin %></p>
+        <p class="paragraph-style">to: <%= booking.checkout %></p>
+        <p class="paragraph-style">for <%= booking.guests %> people</p>
+        <p class="paragraph-style">Status: [<%= booking.status %>]</p>
+        <p class="paragraph-style"><%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking) %></p>
+        <% end %>
+    </div>
+    <div class="new-booking">
 
-<h2>Edit your profile</h2>
 
-<%= simple_form_for [@user] do |f| %>
-    <%= f.input :firstname %>
-    <%= f.input :lastname %>
-    <%= f.input :email %>
-    <%= f.input :payment, :collection => %w[Card Cash] %>
-    <%= f.submit "save", class: "btn btn-primary" %>
-<% end %>
+        <div class="sign-in-h2">Edit your profile</div>
+
+        <%= simple_form_for [@user] do |f| %>
+            <%= f.input :firstname, input_html: {class: "input-from-new-booking"} %>
+            <%= f.input :lastname, input_html: {class: "input-from-new-booking"} %>
+            <%= f.input :email, input_html: {class: "input-from-new-booking"} %>
+            <%= f.input :payment, :collection => %w[Card Cash], input_html: {class: "input-from-new-booking"} %>
+            <%= f.submit "save", class: "btn" %>
+        <% end %>
+    </div>
+  </div>
+</div>
