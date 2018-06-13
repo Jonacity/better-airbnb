@@ -1,4 +1,5 @@
-<div class="sign-in-banner-flats" style="background-image: url(<%= image_path @flat.photo, input_html: {class: "flat-picture"}  %>);">
+<div class="sign-in-banner-flats" style="background-image: url('<%= cl_image_path @flat.photo, input_html: {class: "flat-picture"}  %>');">
+
   <div class="sign-in-flex-show">
     <div class="sign-in-h1"> <%= @flat.name %> </div>
     <p class="description-title"><%= @flat.description %></p>
@@ -6,10 +7,12 @@
     <li>Owner: <%= @flat.user.firstname %></li>
     <li>Price: <%= @flat.price %></li>
     <li>Capicity: <%= @flat.capacity %></li>
-    <li>Location: <%= @flat.address %> at <%= @flat.city %> </li> <!-- To be replace by Google API -->
+    <li>Location: <%= @flat.address %> at <%= @flat.city %></li>
+     <!-- To be replace by Google API -->
     <!-- link to book page -->
     </ul>
   <div class="buttons-flats">
+    <%= link_to "Book now", new_flat_booking_path(@flat), class: "btn" %>
     <%= link_to "Edit flat", edit_flat_path(@flat), class: "btn" %>
     <%= link_to "Delete", flat_path(@flat), class: "btn", method: :delete, data: { confirm: "Are you sure?" } %>
     <%= link_to "Back to the flats", flats_path, class: "btn" %>
