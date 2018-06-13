@@ -11,14 +11,19 @@
       <%= link_to "Add a new flat", new_flat_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <% end %>
     <%= link_to "Flats", flats_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Become a Host</a>
 
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-        <img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+      
+      <!-- line below commented out and replaced by the two lines below it -->
+        <!--<img src="https://kitt.lewagon.com/placeholder/users/ssaunier" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"> -->        
+        <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
+        <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+
+        
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
+          <li><%= link_to "Profile", edit_user_path(current_user) %></li>
           <li><%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
           <% end %></li>

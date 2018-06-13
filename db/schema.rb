@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_084708) do
+ActiveRecord::Schema.define(version: 2018_06_13_130707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2018_06_12_084708) do
     t.integer "guests"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "status", default: "Pending"
     t.index ["flat_id"], name: "index_bookings_on_flat_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
@@ -36,7 +37,6 @@ ActiveRecord::Schema.define(version: 2018_06_12_084708) do
     t.string "city"
     t.integer "capacity"
     t.bigint "user_id"
-    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_flats_on_user_id"
@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(version: 2018_06_12_084708) do
     t.string "lastname"
     t.string "phone"
     t.string "payment"
+    t.string "provider"
+    t.string "uid"
+    t.string "facebook_picture_url"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "token"
+    t.datetime "token_expiry"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
