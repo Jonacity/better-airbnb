@@ -1,8 +1,19 @@
-<h1>All flats</h1>
-
-<ul>
-<% @flats.each do |flat| %>
-<li> <p> <%= link_to flat.name, flat_path(flat) %> in <%= flat.city %> for <%= flat.capacity %> persons -- <%= flat.price %>€ </p></li>
-<% end %>
-</ul>
-
+<div class="cards-banner">
+  <h1 class="title">All My Flats</h1>
+  <div class="card-container">
+    <% flat_user = @flats.each do |flat| %>
+    <div class="card-detail-container">
+      <div class="small-in-banner-flats" style="background-image: url(<%= image_path flat.photo  %>);">
+      </div>
+      <div class="cards-description">
+        <p class="paragraph-style"> Private room </p>
+        <p class="paragraph-style" id="button"> <%= link_to flat.name, flat_path(flat) %> </p>
+        <p class="paragraph-style" id="city"> <%= flat.city %> </p>
+        <p class="other-details"> Capacity: <%= flat.capacity %> people </p>
+        <p class="other-details"> <%= flat.price %>€ - free cancelation </p>
+        <p class="rating"> ☆☆☆☆☆ </p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
