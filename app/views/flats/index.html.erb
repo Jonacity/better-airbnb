@@ -1,10 +1,13 @@
-<div class="cards-banner">
-  <h1 class="title">All flats</h1>
+<div class="cards-banner" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url(<%= image_path('index-pic.jpg') %>);">
+  <h1 class="title">All Flats</h1>
   <div class="card-container">
     <% flat_user = @flats.each do |flat| %>
-    <div class="card-detail-container">
-      <div class="small-in-banner-flats" style="background-image: url(<%= image_path flat.photo  %>);">
-      </div>
+      <div class="card-detail-container"  >
+        <div>
+        <%= link_to flat_path(flat) do %>
+        <%= cl_image_tag flat.photo, class: "small-in-banner-flats"  %>
+        <% end %>
+        </div>
       <div class="cards-description">
         <p class="paragraph-style"> Private room </p>
         <p class="paragraph-style" id="button"> <%= link_to flat.name, flat_path(flat) %> </p>

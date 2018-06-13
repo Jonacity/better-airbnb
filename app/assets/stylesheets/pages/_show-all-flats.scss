@@ -2,10 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
-
+  margin-top: -70px;
+  background-size: cover !important;
+  height: 160vh;
 }
 
+.title {
+  margin-top: 100px;
+  color: snow;
+}
+
+
+#alternate-navbar {
+  background-color: white;
+  color: #333333 !important;
+}
+
+.navbar-wagon-link-alternate {
+  color: #333333 !important;
+}
 #button a {
   font-weight: bold !important;
   color: black !important;
@@ -34,9 +49,12 @@
 }
 
 .card-container {
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-wrap: wrap;
   margin-left: 100px;
+  margin-right: 100px;
+  border-radius: 8px;
 }
 
 .card-detail-container {
@@ -60,6 +78,10 @@
   background-size: cover !important;
   background-position: center;
   border-radius: 5px;
+}
+
+.small-in-banner-flats:hover {
+  opacity: 0.6;
 }
 
 .card-description {
