@@ -1,0 +1,86 @@
+.inbox {
+    border: 1px solid #dce0e0;
+    padding: 0 20px;
+    margin: 0;
+    margin-bottom: 3%;
+}
+
+.message {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(220,224,244,0.4);
+}
+
+.message-name {
+    padding-left: 20px;
+    width: 140px;
+}
+
+.message-name h3 {
+    font-size: 13px;
+    margin-bottom: 0px;
+}
+
+.message-name p {
+    font-size: 13px;
+    font-weight: lighter;
+    opacity: 0.6;
+    margin-top: 5px;
+}
+
+.message-body {
+    padding-left: 10px;
+    font-size: 13px;
+    color: rgba(0,0,0,0.7);
+    // flex-grow: 1;
+}
+
+.message-body strong {
+  color: rgba(0,0,0,0.9);
+}
+
+.message-body p {
+  margin: 6px 0;
+}
+
+.message-status {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  float: left;
+}
+
+.status.accepted {
+  color: #04A366;
+}
+.status.declined {
+  color: red;
+}
+.status.pending {
+  color: lightgrey;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+
+.li {
+  display: list-item;
+}
+
+.flat-picture {
+    width: 250px;
+}
+
+#banner-for-my-bookings {
+  height: 50vh;
+  background-position: center;
+}

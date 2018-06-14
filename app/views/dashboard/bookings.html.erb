@@ -1,18 +1,47 @@
-<div class="booking-banner" id="banner-for-new-booking-profile" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url(<%= image_path('my-booking.jpg') %>);">
+<div class="booking-banner" id="banner-for-my-bookings" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url(<%= image_path('my-booking.jpg') %>);">
   <div class="sign-in-flex">
     <div class="my-booking">My Bookings</div>
-        <div class="bookings-description">
-            <% @bookings.each do |booking| %>
-            <p class="paragraph-style" id="title-booking"><%= booking.flat.name %></p>
-            <p class="paragraph-style">from: <%= booking.checkin %></p>
-            <p class="paragraph-style">to: <%= booking.checkout %></p>
-            <p class="paragraph-style">for <%= booking.guests %> people</p>
-            <p class="paragraph-style">Status: <%= booking.status %></p>
-            <p class="paragraph-style"><%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking), class: "btn" %></p>
-            <p class="paragraph-style"><%= link_to 'Accept', accept_flat_booking_path(booking.flat, booking), method: :patch, class: "btn" %></p>
-            <p class="paragraph-style"><%= link_to 'Decline', decline_flat_booking_path(booking.flat, booking), method: :patch, class: "btn" %></p>
-            <% end %>
-        </div>
+        
     </div>
 </div>
+
+<% @bookings.each do |booking| %>
+<div class="container">
+    
+    <div class="tabs">
+        <a href="<%= flat_path(booking.flat) %>" class="tab active"><%= booking.flat.name %></a>
+        <%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking), class: "tabs-btn" %>
+        <%= link_to 'Accept', accept_flat_booking_path(booking.flat, booking), method: :patch, class: "tabs-btn" %>
+        <%= link_to 'Decline', decline_flat_booking_path(booking.flat, booking), method: :patch, class: "tabs-btn" %>
+    </div>
+
+    <ul class="inbox">
+        <li class="message">
+            <img src="<%= booking.flat.photo %>" class="flat-picture">
+            <div class="message-name">
+                <h3><%= booking.flat.user.firstname %> <%= booking.flat.user.lastname %></h3>
+                <p>From: <%= booking.checkin %> <br> To: <%= booking.checkout %></p>
+                <p><%= booking.guests %> persons</p>
+            </div>
+            <div class="message-body">
+            <p>
+                <strong><%= booking.flat.city %></strong>
+            </p>
+            <p>
+                <%= booking.flat.description %>
+            </p>
+            <p>
+                Free cancelation
+            </p>
+            </div>
+
+        <div class="message-status">
+            <p class="status pending"><%= booking.status %></p>
+            <p class="price">€<%= booking.flat.price %></p>
+        </div>
+
+        </li>
+    </ul>
+    </div>
+    <% end %>
 
