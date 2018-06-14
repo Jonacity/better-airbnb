@@ -8,8 +8,11 @@
     <li>Price: <%= @flat.price %></li>
     <li>Capicity: <%= @flat.capacity %></li>
     <li>Location: <%= @flat.address %> at <%= @flat.city %></li>
-     <!-- To be replace by Google API -->
-    <!-- link to book page -->
+    <% if @flat.rating == nil %>
+      <li><p>No reviews</p></li>
+    <% else %>
+      <li><span class="rating"><% @flat.rating.times do %>☆<% end %></span></li>
+    <% end %>
     </ul>
   <div class="buttons-flats">
     <% unless current_user == @flat.user %>
