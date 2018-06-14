@@ -1,13 +1,15 @@
-<div class="cards-banner" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url(<%= image_path('index-pic.jpg') %>);">
-  <h1 class="title">All Flats</h1>
-  <div class="card-container">
+
+<div class="banner-main index-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 10%, rgba(0,36,61,0.3) 70%), url(<%= image_path('index-pic.jpg') %>);">
+  <h1 class="title">Select the flat that better suites your needs from our great community.</h1>
+</div>
+<div class="container">
+  <div class="row">
     <% flat_user = @flats.each do |flat| %>
-      <div class="card-detail-container"  >
-        <div>
-        <%= link_to flat_path(flat) do %>
-        <%= cl_image_tag flat.photo, class: "small-in-banner-flats"  %>
-        <% end %>
-        </div>
+  <div class="col-xs-12 col-sm-4">
+    <div class="card-detail-container">
+      <%= link_to flat_path(flat) do %>
+      <%= cl_image_tag flat.photo, class: "small-in-banner-flats"  %>
+      <% end %>
       <div class="cards-description">
         <p class="paragraph-style"> Private room </p>
         <p class="paragraph-style" id="button"> <%= link_to flat.name, flat_path(flat) %> </p>
@@ -17,14 +19,14 @@
         <p class="rating"> ☆☆☆☆☆ </p>
       </div>
     </div>
-    <% end %>
   </div>
-  
-  <div
-  id="map"
-  style="width: 70%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-></div>
+  <% end %>
 </div>
+</div>
+<div
+id="map"
+style="width: 100%;
+height: 100vh;"
+data-markers="<%= @markers.to_json %>"
+></div>
 
