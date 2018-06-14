@@ -8,7 +8,9 @@
             <p class="paragraph-style">to: <%= booking.checkout %></p>
             <p class="paragraph-style">for <%= booking.guests %> people</p>
             <p class="paragraph-style">Status: <%= booking.status %></p>
-            <p class="paragraph-style"><%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking), class: "btn"  %></p>
+            <p class="paragraph-style"><%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking), class: "btn" %></p>
+            <p class="paragraph-style"><%= link_to 'Accept', accept_flat_booking_path(booking.flat, booking), method: :patch, class: "btn" %></p>
+            <p class="paragraph-style"><%= link_to 'Decline', decline_flat_booking_path(booking.flat, booking), method: :patch, class: "btn" %></p>
             <% end %>
         </div>
     </div>
