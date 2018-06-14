@@ -9,7 +9,7 @@
 <div class="container">
     
     <div class="tabs">
-        <a href="#" class="tab active"><%= booking.flat.name %></a>
+        <a href="<%= flat_path(booking.flat) %>" class="tab active"><%= booking.flat.name %></a>
         <%= link_to 'Edit', edit_flat_booking_path(booking.flat, booking), class: "tabs-btn" %>
         <%= link_to 'Accept', accept_flat_booking_path(booking.flat, booking), method: :patch, class: "tabs-btn" %>
         <%= link_to 'Decline', decline_flat_booking_path(booking.flat, booking), method: :patch, class: "tabs-btn" %>
