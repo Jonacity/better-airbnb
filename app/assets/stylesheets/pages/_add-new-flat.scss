@@ -23,29 +23,3 @@
   height: 60px;
   border-radius: 4px;
 }
-
-#flat_photo {
-  padding-top: 5px;
-  border: 2px solid #FC5B62;
-  background-color: #FC5B62;
-  width: 350px;
-  height: 60px;
-  border-radius: 4px;
-  font-family: "Raleway", "Helvetica", "sans-serif";
-  font-size: 24px;
-  font-weight: lighter !important;
-  color: #FC5B62;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  margin-left: 75px;
-  text-align: center;
-  .form-control-file .file .required .input-from-new {
-    background-color: blue;
-  }
-}
-
-
-
-#flat_photo:hover {
-  opacity: 0.8;
-}

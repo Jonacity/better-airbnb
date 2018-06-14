@@ -1,0 +1,82 @@
+.green-button {
+  background-color: transparent;
+  border: 2px solid #118488;
+  border-radius: 4px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: bold !important;
+  text-align: center;
+  color: #118488;
+  margin-bottom: 20px;
+  padding-left: 103px;
+  padding-right: 100px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.green-button:hover {
+  opacity: 0.8;
+  color: #118488 !important;
+}
+
+a {
+  color: darkgray;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #FC5B62;
+}
+
+.btn {
+  border: 2px solid #FC5B62;
+  background-color: #FC5B62;
+  width: 350px;
+  height: 60px;
+  border-radius: 4px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: snow;
+  margin-bottom: 25px;
+  padding-top: 10px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  color: snow;
+}
+
+.remember-me-button {
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: snow;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.button-mask {
+  border: 2px solid #FC5B62;
+  background-color: #FC5B62;
+  width: 259px;
+  height: 60px;
+  border-radius: 4px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: snow;
+  margin-top: -75px;
+  margin-left: 120px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button-mask:hover {
+  opacity: 0.8;
+}
+
+#flat_photo {
+  opacity: 0;
+}
+
+
