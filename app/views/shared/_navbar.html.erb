@@ -1,6 +1,6 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
+  <a href="/" class="navbar-wagon-brand justify-start">
     <%= image_tag('logo.png') %>
   </a>
 
@@ -17,16 +17,16 @@
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
-      
+
       <!-- line below commented out and replaced by the two lines below it -->
       <% unless current_user.photo.url.nil? %>
-        <img src='<%= cl_image_path current_user.photo %>' class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">       
+        <img src='<%= cl_image_path current_user.photo %>' class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
       <% else %>
         <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
         <%= image_tag avatar_url, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
       <% end %>
 
-        
+
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li><%= link_to "Profile", edit_user_path(current_user) %></li>
           <li><%= link_to destroy_user_session_path, method: :delete do %>

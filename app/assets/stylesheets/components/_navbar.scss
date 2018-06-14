@@ -7,12 +7,16 @@
   padding: 0px 30px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
+}
+
+.justify-start {
+  margin-right: auto;
 }
 
 /* User Avatar */
