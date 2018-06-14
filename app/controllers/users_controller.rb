@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   end
 
   private 
-
+  # test 
   def user_params
     params.require(:user).permit(:firstname, :lastname, :email, :payment, :photo) 
-  end
+  endg
 end
 
