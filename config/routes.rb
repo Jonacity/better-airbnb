@@ -3,7 +3,12 @@ Rails.application.routes.draw do
   get 'dashboard/bookings'
 
   resources :flats do
-    resources :bookings, only: [:new, :create, :edit, :update]
+    resources :bookings, only: [:new, :create, :edit, :update] do
+      member do
+        patch '/accept', to: "bookings#accept"
+        patch '/decline', to: "bookings#decline"
+      end
+    end
   end
 
   resources :users, only: [:edit, :update]

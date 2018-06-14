@@ -4,6 +4,6 @@
     <%= f.input :checkin %>
     <%= f.input :checkout %>
     <%= f.input :guests %>
-    <%= f.input :status, :collection => %w[Accepted Declined] %>
+    <%= f.input :status, as: :hidden, input_html: { value: "Pending" } %>
     <%= f.submit "save", class: "btn btn-primary" %>
 <% end %>
