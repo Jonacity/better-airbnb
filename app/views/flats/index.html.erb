@@ -5,23 +5,27 @@
 <div class="container">
   <div class="row">
     <% flat_user = @flats.each do |flat| %>
-  <div class="col-xs-12 col-sm-4">
-    <div class="card-detail-container">
-      <%= link_to flat_path(flat) do %>
-      <%= cl_image_tag flat.photo, class: "small-in-banner-flats"  %>
-      <% end %>
-      <div class="cards-description">
-        <p class="paragraph-style"> Private room </p>
-        <p class="paragraph-style" id="button"> <%= link_to flat.name, flat_path(flat) %> </p>
-        <p class="paragraph-style" id="city"> <%= flat.city %> </p>
-        <p class="other-details"> Capacity: <%= flat.capacity %> people </p>
-        <p class="other-details"> <%= flat.price %>€ - free cancelation </p>
-        <p class="rating"> ☆☆☆☆☆ </p>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card-detail-container">
+        <%= link_to flat_path(flat) do %>
+        <%= cl_image_tag flat.photo, class: "small-in-banner-flats"  %>
+        <% end %>
+          <div class="cards-description">
+            <p class="paragraph-style"> Private room </p>
+            <p class="paragraph-style" id="button"> <%= link_to flat.name, flat_path(flat) %> </p>
+            <p class="paragraph-style" id="city"> <%= flat.city %> </p>
+            <p class="other-details"> Capacity: <%= flat.capacity %> people </p>
+            <p class="other-details"> <%= flat.price %>€ - free cancelation </p>
+            <% if flat.rating == nil %>
+              <p>No reviews</p>
+            <% else %>
+              <span class="rating"><% flat.rating.times do %>☆<% end %></span>
+            <% end %>
+        </div>
       </div>
     </div>
+   <% end %>
   </div>
-  <% end %>
-</div>
 </div>
 <div
 id="map"
