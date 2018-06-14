@@ -3,14 +3,27 @@ class FlatsController < ApplicationController
   
   def index
     # @flats = policy_scope(Flat)
-    @flats = Flat.where.not(latitude: nil, longitude: nil)
 
-    @markers = @flats.map do |flat|
-      {
-        lat: flat.latitude,
-        lng: flat.longitude#,
-        # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
-      }
+    if params[:query].present?
+      @flats = Flat.search_by_content(params[:query])
+
+      @markers = @flats.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude
+          # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+        }
+      end
+    else
+      @flats = Flat.where.not(latitude: nil, longitude: nil)
+
+      @markers = @flats.map do |flat|
+        {
+          lat: flat.latitude,
+          lng: flat.longitude
+          # infoWindow: { content: render_to_string(partial: "/flats/map_box", locals: { flat: flat }) }
+        }
+      end
     end
   end
 
