@@ -1,21 +1,40 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.3) 10%, rgba(0,36,61,0.3) 70%), url(<%= image_path('santorini.jpg') %>);">
-  <div class="banner-content">
-    <h1>Book unique homes and experiences all over the world.</h1>
-    <div class="container">
-  <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <div id="imaginary_container">
-                <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Search" >
-                    <span class="input-group-addon">
-                        <button type="submit">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
+    <div class="banner-content">
+        <h1>Book unique homes and experiences all over the world.</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <div id="imaginary_container">
+                        <div class="input-group stylish-input-group">
+                            <input type="text" class="form-control"  placeholder="To remove" >
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                        </div>
+                        
+                        <br>
+
+                        <div class="input-group stylish-input-group">
+                            <%= form_tag flats_path, class: "form-inline", method: :get do %>
+                            <%= text_field_tag :query,
+                                params[:query],
+                                class: "form-control",
+                                placeholder: "Search"
+                            %>
+                            
+                            <span class="input-group-addon">
+                                <button type="submit">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                            </span>
+                            <% end %>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
-  </div>
-</div>
-  </div>
+    </div>
 </div>
