@@ -10,8 +10,9 @@
             <%= f.input :city, input_html: {class: "input-from-new"} %>
             <%= f.input :capacity, input_html: {class: "input-from-new"} %>
             <%= f.input :photo, input_html: {class: "input-from-new"} %>
+            <div class="button-mask">Upload Photo</div>
             <%= f.input :photo_cache, as: :hidden, input_html: {class: "import-button"} %>
-            <%= f.submit "save", class: "btn" %>
+            <%= f.submit "save", class: "green-button" %>
         <% end %>
         <%= link_to 'Back', flats_path %>
     </div>
