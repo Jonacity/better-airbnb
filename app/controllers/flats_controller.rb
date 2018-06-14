@@ -16,7 +16,8 @@ class FlatsController < ApplicationController
       end
     else
       @flats = Flat.where.not(latitude: nil, longitude: nil)
-
+      # @flats = Flat.all
+      
       @markers = @flats.map do |flat|
         {
           lat: flat.latitude,
