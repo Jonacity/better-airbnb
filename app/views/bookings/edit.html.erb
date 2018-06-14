@@ -3,11 +3,11 @@
         <div class="new-booking">
             <div class="sign-in-h2">Edit your booking</div>
             <%= simple_form_for [@flat, @booking] do |f| %>
-                <%= f.input :checkin %>
-                <%= f.input :checkout %>
-                <%= f.input :guests %>
+                <%= f.input :checkin, input_html: {class: "input-from-new-booking"} %>
+                <%= f.input :checkout, input_html: {class: "input-from-new-booking"} %>
+                <%= f.input :guests, input_html: {class: "input-from-new-booking"} %>
                 <%= f.input :status, as: :hidden, input_html: { value: "Pending" } %>
-                <%= f.submit "save", class: "btn btn-primary" %>
+                <%= f.submit "save", class: "btn" %>
             <% end %>
         </div>
     </div>
