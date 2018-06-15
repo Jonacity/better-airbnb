@@ -5,6 +5,33 @@
     margin-bottom: 3%;
 }
 
+.container-all-reviews {
+  width: 80%;
+  margin: auto;
+
+}
+
+.review-title {
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.inbox-review {
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid gray;
+  width: 100%;
+}
+
+.review {
+  padding-left: 20px;
+}
+
 .message {
     display: flex;
     justify-content: space-between;
@@ -43,6 +70,14 @@
 
 .message-body p {
   margin: 6px 0;
+}
+
+.message-body-review {
+  margin: 6px 0;
+  width: 100%;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 13px;
+  color: rgba(0,0,0,0.7);
 }
 
 .message-status {

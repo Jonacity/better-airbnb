@@ -1,4 +1,8 @@
-<%= simple_form_for [@flat, @review] do |f| %>
-  <%= f.input :content %>
-  <%= f.submit "add a review", class: "btn btn-primary pull-right" %>
-<% end %>
+<div class="sign-in-flex">
+  <div class="new-form-review sign-in">
+    <%= simple_form_for [@flat, @review] do |f| %>
+      <%= f.input :content, input_html: {class: "input-from-new-review"} %>
+      <%= f.submit "add a review", class: "btn" %>
+    <% end %>
+  </div>
+</div>
