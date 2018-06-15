@@ -9,7 +9,7 @@
     <li>Capicity: <%= @flat.capacity %></li>
     <li>Location: <%= @flat.address %> at <%= @flat.city %></li>
     <% if @flat.rating == nil %>
-      <li><p>No reviews</p></li>
+      <li><span>No reviews</span></li>
     <% else %>
       <li><span class="rating"><% @flat.rating.times do %>☆<% end %></span></li>
     <% end %>
