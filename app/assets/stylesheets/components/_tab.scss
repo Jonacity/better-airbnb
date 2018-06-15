@@ -10,8 +10,14 @@
     font-size: 18px;
     font-weight: bold;
     padding: 10px;
-    border-bottom: 5px solid #00A699;
+    border-bottom: 5px solid #118488;
     margin-right: auto;
+    margin-top: 10px;
+}
+
+.tab.active:hover {
+  opacity: 0.8;
+  color: #118488 !important;
 }
 
 .tab{
@@ -38,4 +44,5 @@
     padding-top: 8px;
     padding-bottom: 8px;
     margin-left: 20px;
+    margin-bottom: 5px;
 }

@@ -7,9 +7,10 @@
                 <%= f.input :lastname, input_html: {class: "input-from-new-booking"} %>
                 <%= f.input :email, input_html: {class: "input-from-new-booking"} %>
                 <%= f.input :payment, as: :radio_buttons, collection: ['Card', 'Cash'], input_html: {class: "input-from-new-booking"} %>
-                <%= f.input :photo, input_html: {class: "input-from-new"} %>
+                <%= f.input :photo, input_html: {class: "input-from-new", id: "payment"} %>
                 <%= f.input :photo_cache, as: :hidden, input_html: {class: "import-button"} %>
-                <%= f.submit "save", class: "btn" %>
+                <div class="button-mask-profile">Upload Photo</div>
+                <%= f.submit "save", class: "green-button" %>
             <% end %>
         </div>
     </div>

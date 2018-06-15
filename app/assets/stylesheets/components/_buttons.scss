@@ -7,11 +7,13 @@
   font-weight: bold !important;
   text-align: center;
   color: #118488;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   padding-left: 103px;
   padding-right: 100px;
   padding-top: 12px;
   padding-bottom: 12px;
+  margin-top: 15px;
+
 }
 
 .green-button:hover {
@@ -38,8 +40,8 @@ a:hover {
   font-size: 24px;
   font-weight: lighter !important;
   color: snow;
-  margin-bottom: 25px;
   padding-top: 10px;
+  margin-top: 15px;
 }
 
 .btn:hover {
@@ -79,4 +81,25 @@ a:hover {
   opacity: 0;
 }
 
+#payment {
+  color: lightgrey !important;
+}
 
+.button-mask-profile {
+  border: 2px solid #FC5B62;
+  background-color: #FC5B62;
+  width: 259px;
+  height: 60px;
+  border-radius: 4px;
+  font-family: "Raleway", "Helvetica", "sans-serif";
+  font-size: 24px;
+  font-weight: lighter !important;
+  color: snow;
+  margin-top: -75px;
+  margin-left: 140px;
+  padding-top: 10px;
+}
+
+#payment {
+  opacity: 0;
+}
