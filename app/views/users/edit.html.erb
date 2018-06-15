@@ -2,7 +2,9 @@
   <div class="sign-in-flex">
         <div class="new-booking">
             <div class="sign-in-h2">Edit your profile</div>
-            <%= image_tag @user.photo.url, id: "profile-picture" %>
+            <% unless @user.photo.url.nil? %>
+                <%= image_tag @user.photo.url, id: "profile-picture" %>
+            <% end %>
             <%= simple_form_for [@user] do |f| %>
                 <%= f.input :firstname, input_html: {class: "input-from-new-booking"} %>
                 <%= f.input :lastname, input_html: {class: "input-from-new-booking"} %>
