@@ -17,7 +17,7 @@
             <p class="other-details"> Capacity: <%= flat.capacity %> people </p>
             <p class="other-details"> <%= flat.price %>€ - free cancelation </p>
             <% if flat.rating == nil %>
-              <p>No reviews</p>
+              <span>No reviews</span>
             <% else %>
               <span class="rating"><% flat.rating.times do %>☆<% end %></span>
             <% end %>
