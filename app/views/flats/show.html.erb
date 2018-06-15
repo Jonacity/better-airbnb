@@ -26,16 +26,14 @@
     </div>
   </div>
 </div>
-
-<h3>Reviews</h3>
-
+<div class="container-all-reviews">
+<h3 class="review-title">Reviews</h3>
 <% @flat.reviews.each do |review| %>
-<div class="container">
-
-    <ul class="inbox">
-        <li class="message">
+<div class="container-review">
+    <p class="inbox-review">
+        <p class="review">
         <% unless review.user.photo.nil? %>
-            <img class="avatar-large" src="<%= review.user.photo.url %>">
+          <img class="avatar-large" src="<%= review.user.photo.url %>">
         <% else %>
           <img class="avatar-large" src="http://placehold.it/30x30">
         <% end %>
@@ -43,7 +41,7 @@
                 <h3><%= review.user.firstname %> <%= review.user.lastname %></h3>
                 <p><%= Date.today %></p>
             </div>
-             <div class="message-body">
+             <div class="message-body-review">
             <p>
                 <%= review.content %>
             </p>
@@ -54,5 +52,5 @@
     <% end %>
 
 <br>
-
+</div>
 <%= render 'review-form' %>
