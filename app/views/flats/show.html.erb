@@ -1,22 +1,23 @@
 <div class="sign-in-banner-flats" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url('<%= cl_image_path @flat.photo, input_html: {class: "flat-picture"}  %>');">
 
   <div class="sign-in-flex-show">
-    <div class="sign-in-h1"> <%= @flat.name %> </div>
-    <p class="description-title"><%= @flat.description %></p>
-    <ul class="flat-description">
-    <li>Owner: <%= @flat.user.firstname %></li>
-    <li>Price: <%= @flat.price %></li>
-    <li>Capicity: <%= @flat.capacity %></li>
-    <li>Location: <%= @flat.address %> at <%= @flat.city %></li>
-    <% if @flat.rating == nil %>
-      <li><span>No reviews</span></li>
-    <% else %>
-      <li><span class="rating"><% @flat.rating.times do %>☆<% end %></span></li>
-    <% end %>
-    </ul>
+    <div class="flat-description">
+      <p class="sign-in-h1"> <%= @flat.name %> </p>
+      <p class="description-title"><%= @flat.description %></p>
+      <p>Owner: <%= @flat.user.firstname %></p>
+      <p>Price: <%= @flat.price %></p>
+      <p>Capicity: <%= @flat.capacity %></p>
+      <p>Location: <%= @flat.address %> at <%= @flat.city %></p>
+      <% if @flat.rating == nil %>
+        <p><span>No reviews</span></p>
+      <% else %>
+        <p><span class="rating"><% @flat.rating.times do %>☆<% end %></span></p>
+      <% end %>
+  </div>
   <div class="buttons-flats">
     <% unless current_user == @flat.user %>
       <%= link_to "Book now", new_flat_booking_path(@flat), class: "btn" %>
+      <%= link_to "Back to flats", flats_path, class: "green-button" %>
     <% else %>
       <%= link_to "Edit flat", edit_flat_path(@flat), class: "btn" %>
       <%= link_to "Delete", flat_path(@flat), class: "btn", method: :delete, data: { confirm: "Are you sure?" } %>

@@ -12,6 +12,18 @@
   justify-content: center;
 }
 
+.password-banner {
+margin-top: -70px;
+  color: white;
+  text-align: center;
+  height: 100vh !important;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .sign-in-flex{
   display: flex;
   flex-direction: column;
