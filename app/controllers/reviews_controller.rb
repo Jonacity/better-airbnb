@@ -4,8 +4,9 @@ class ReviewsController < ApplicationController
     def create
         @review = Review.new(review_params)
         @review.flat = @flat
+        @review.user = current_user
 
-        if @review.save
+        if @review.save!
             redirect_to flat_path(@flat)
         else
             redirect_to flat_path(@flat)
