@@ -30,6 +30,7 @@ class FlatsController < ApplicationController
 
   def show
     authorize @flat
+    @review = Review.new
   end
 
   def edit
