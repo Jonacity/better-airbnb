@@ -1,7 +1,7 @@
 <div class="sign-in-banner" id="banner-for-new" style="background-image: linear-gradient(to right, rgba(118, 184, 82,0.3) 10%, rgba(141, 194, 111,0.3) 70%), url(<%= image_path('update.jpg') %>);">
   <div class="sign-in-flex">
-    <div class="new-form">
-      <div class="sign-in-h2">Add a New Flat</div>
+    <div class="new-form sign-in">
+      <div class="sign-in-h2">Update or Add a Flat</div>
         <%= simple_form_for [@flat] do |f| %>
             <%= f.input :name, input_html: {class: "input-from-new"} %>
             <%= f.input :description, input_html: {class: "input-from-new"} %>
