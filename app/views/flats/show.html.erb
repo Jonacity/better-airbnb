@@ -34,12 +34,16 @@
 
     <ul class="inbox">
         <li class="message">
-            <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+        <% unless review.user.photo.nil? %>
+            <img class="avatar-large" src="<%= review.user.photo.url %>">
+        <% else %>
+          <img class="avatar-large" src="http://placehold.it/30x30">
+        <% end %>
             <div class="message-name">
-                <h3><%= current_user.firstname %> <%= current_user.lastname %></h3>
-                <p>Current date</p>
+                <h3><%= review.user.firstname %> <%= review.user.lastname %></h3>
+                <p><%= Date.today %></p>
             </div>
-            <div class="message-body">
+             <div class="message-body">
             <p>
                 <%= review.content %>
             </p>
