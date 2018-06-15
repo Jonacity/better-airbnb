@@ -5,7 +5,7 @@
       <p class="sign-in-h1"> <%= @flat.name %> </p>
       <p class="description-title"><%= @flat.description %></p>
       <p>Owner: <%= @flat.user.firstname %></p>
-      <p>Price: <%= @flat.price %></p>
+      <p>Price: <%= @flat.price %>€</p>
       <p>Capicity: <%= @flat.capacity %></p>
       <p>Location: <%= @flat.address %> at <%= @flat.city %></p>
       <% if @flat.rating == nil %>

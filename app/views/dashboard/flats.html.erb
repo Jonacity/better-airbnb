@@ -15,7 +15,11 @@
         <p class="paragraph-style" id="city"> <%= flat.city %> </p>
         <p class="other-details"> Capacity: <%= flat.capacity %> people </p>
         <p class="other-details"> <%= flat.price %>€ - free cancelation </p>
-        <p class="rating"> ☆☆☆☆☆ </p>
+        <% if flat.rating == nil %>
+          <span>No reviews</span>
+        <% else %>
+          <span class="rating"><% flat.rating.times do %>☆<% end %></span>
+        <% end %>
       </div>
     </div>
   </div>
